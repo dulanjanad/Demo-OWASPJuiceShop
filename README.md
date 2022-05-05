@@ -18,8 +18,9 @@ Ignore below steps if you already have an environment to run git, terraform, aws
     
     verify: aws --version
 
-aws configure (Make sure to provide you AWS credentials – AWS Access Key ID, AWS Secret)
-verify: aws configure list
+    aws configure 
+    (Make sure to provide you AWS credentials – AWS Access Key ID, AWS Secret)
+    verify: aws configure list
 
 3). Install and configure Terraform CLI
 
