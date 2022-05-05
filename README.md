@@ -31,17 +31,9 @@ verify: aws configure list
 
 4). Install kubectl
 
-    cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
-    [kubernetes]
-    name=Kubernetes
-    baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
-    enabled=1
-    gpgcheck=1
-    repo_gpgcheck=1
-    gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
-    EOF
+    curl -LO https://dl.k8s.io/release/v1.22.5/bin/linux/amd64/kubectl
+    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
-    sudo yum install -y kubectl
     
     verify: kubectl version --client
 
@@ -89,7 +81,7 @@ Deployment of Application (One of the two ways can be used)
 	
 3). Deploy the application with helm
 	
-	helm upgrade --install --wait --timeout 120s new-deployement .
+	helm upgrade --install --wait --timeout 120s new-deploy .
 	(You can specify any deployment name)
 
 4). Verify the deployment.
@@ -104,7 +96,7 @@ Deployment of Application (One of the two ways can be used)
 
 1). Delete the deployment with helm
 	
-    helm delete new-deployement (Make sure to put the given deployment name)
+    helm delete new-deploy (Make sure to put the given deployment name)
 
 2). Destroy AWS resources 
     
