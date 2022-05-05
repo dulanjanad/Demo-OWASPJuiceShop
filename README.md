@@ -103,8 +103,10 @@ Deployment of Application (One of the two ways can be used)
 ## Destroy Resources
 
 1). Delete the deployment with helm
-	helm delete new-deployement (Make sure to put the given deployment name)
+	
+    helm delete new-deployement (Make sure to put the given deployment name)
 
 2) Destroy AWS resources 
+        
     cd Demo-OWASPJuiceShop/Terraform
     terraform destroy
