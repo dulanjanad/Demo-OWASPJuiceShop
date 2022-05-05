@@ -106,7 +106,7 @@ Deployment of Application (One of the two ways can be used)
 	
     helm delete new-deployement (Make sure to put the given deployment name)
 
-2) Destroy AWS resources 
+2). Destroy AWS resources 
     
     terraform destroy
 #
