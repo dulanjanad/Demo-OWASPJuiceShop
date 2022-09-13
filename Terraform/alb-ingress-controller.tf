@@ -5,7 +5,7 @@ provider "kubectl" {
   load_config_file       = false
 }
 
-resource "kubectl_manifest" "lusterRole-alb-ingress-controller" {
+resource "kubectl_manifest" "clusterRole-alb-ingress-controller" {
     yaml_body = <<YAML
 ---
 apiVersion: rbac.authorization.k8s.io/v1
